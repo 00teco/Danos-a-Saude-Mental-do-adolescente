@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saúde Mental e Redes Sociais</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="#inicio" class="logo">NOME DO GRUPO</a>
+        <a href="#conteudo">Explorar ↓</a>
+    </header>
+
+    <main>
+
+        <!-- PÁGINA INICIAL -->
+
+        <section class="inicio" id="inicio">
+            <h1>
+                DANOS À SAÚDE MENTAL
+                <span>CAUSADOS PELO VÍCIO EM REDES SOCIAIS</span>
+            </h1>
+
+            <p>Trabalho escolar — NOME DO GRUPO</p>
+
+            <a href="#conteudo" class="botao">
+                Acessar o trabalho →
+            </a>
+
+            <div class="indicador">
+                Role para baixo ↓
+            </div>
+        </section>
+
+        <!-- SEÇÃO 1 -->
+
+        <section class="secao" id="conteudo">
+            <h2>SEÇÃO 1</h2>
+            <div class="espaco-conteudo"></div>
+
+            <a href="#secao2" class="botao">Continuar ↓</a>
+        </section>
+
+        <!-- SEÇÃO 2 -->
+
+        <section class="secao" id="secao2">
+            <h2>SEÇÃO 2</h2>
+            <div class="espaco-conteudo"></div>
+
+            <a href="#secao3" class="botao">Continuar ↓</a>
+        </section>
+
+        <!-- SEÇÃO 3 -->
+
+        <section class="secao" id="secao3">
+            <h2>SEÇÃO 3</h2>
+            <div class="espaco-conteudo"></div>
+
+            <a href="#secao4" class="botao">Continuar ↓</a>
+        </section>
+
+        <!-- SEÇÃO 4 -->
+
+        <section class="secao" id="secao4">
+            <h2>SEÇÃO 4</h2>
+            <div class="espaco-conteudo"></div>
+
+            <a href="#fim" class="botao">Finalizar ↓</a>
+        </section>
+
+    </main>
+
+    <footer id="fim">
+        <p>NOME DO GRUPO — TRABALHO ESCOLAR</p>
+        <a href="#inicio" class="voltar">
+            Voltar ao início ↑
+        </a>
+    </footer>
+
+</body>
+</html>
+
+
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: #f5f5ff;
+}
+
+/* MENU SUPERIOR */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(11, 16, 32, 0.9);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+}
+
+.logo {
+    color: #a78bfa;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+/* PÁGINA INICIAL */
+
+.inicio {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 60px;
+
+    background: radial-gradient(
+        circle at 50% 40%,
+        #34245f 0%,
+        #171b38 35%,
+        #0b1020 75%
+    );
+}
+
+.inicio h1 {
+    font-size: clamp(32px, 6vw, 64px);
+    max-width: 900px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.inicio h1 span {
+    display: block;
+    color: #a78bfa;
+}
+
+.inicio p {
+    font-size: 18px;
+    color: #c5c7d8;
+    margin-bottom: 35px;
+}
+
+/* BOTÕES */
+
+.botao {
+    display: inline-block;
+    padding: 16px 32px;
+    background: #8b5cf6;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #a78bfa;
+    transform: translateY(-3px);
+}
+
+/* INDICADOR DE ROLAGEM */
+
+.indicador {
+    position: absolute;
+    bottom: 25px;
+    color: #a78bfa;
+    font-size: 14px;
+}
+
+/* SEÇÕES DO TRABALHO */
+
+.secao {
+    min-height: 100vh;
+    padding: 120px 10% 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    scroll-margin-top: 70px;
+}
+
+.secao:nth-of-type(even) {
+    background: #11172b;
+}
+
+.secao:nth-of-type(odd) {
+    background: #17152e;
+}
+
+.secao h2 {
+    font-size: clamp(28px, 4vw, 46px);
+    color: #c4b5fd;
+    margin-bottom: 25px;
+}
+
+/* ESPAÇOS RESERVADOS PARA CONTEÚDO */
+
+.espaco-conteudo {
+    width: 100%;
+    max-width: 850px;
+    min-height: 220px;
+    border: 2px dashed #514477;
+    border-radius: 16px;
+    margin: 20px 0;
+}
+
+/* LINK PARA VOLTAR */
+
+.voltar {
+    display: inline-block;
+    margin-top: 25px;
+    color: #c4b5fd;
+    text-decoration: none;
+}
+
+/* RODAPÉ */
+
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    background: #080b16;
+    color: #9296ad;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    header {
+        padding: 18px 6%;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .inicio p {
+        font-size: 16px;
+    }
+
+    .secao {
+        padding: 100px 6% 60px;
+    }
+}
+
+
